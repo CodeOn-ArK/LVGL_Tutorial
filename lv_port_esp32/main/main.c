@@ -196,27 +196,7 @@ static void create_demo_application(void)
     #elif defined CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER
         lv_demo_keypad_encoder();
     #elif defined CONFIG_LV_USE_DEMO_BENCHMARK
-        //lv_demo_benchmark();
-        lv_obj_t *base_obj = lv_obj_create(lv_scr_act(), NULL);
-        lv_obj_set_size(base_obj, 100, 100);
-        lv_obj_set_style_local_bg_color(base_obj, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0xFFFD));
-        lv_obj_t *base_obj_1 = lv_obj_create(lv_scr_act(), base_obj);
-        lv_obj_set_pos(base_obj_1, 100, 100);
-        lv_obj_set_style_local_bg_color(base_obj_1, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x5FCD));
-        lv_obj_t *base_obj_2 = lv_obj_create(lv_scr_act(), base_obj);
-        lv_obj_set_pos(base_obj_2, 200, 200);
-        lv_obj_set_style_local_bg_color(base_obj_2, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x100D));
-/*
-        uint16_t  i=0;
-        while(i<0xFFFF){
-        lv_obj_set_style_local_bg_color(base_obj, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex(0x0+i++));
-        vTaskDelay(pdTICKS_TO_MS(10));
-        i += 100;
-        }
-*/
-    //    lv_label_set_text(base_obj, "ssu");
-
-        //lv_obj_set_pos(base_obj, 4, 4);
+        lv_demo_benchmark();
     #elif defined CONFIG_LV_USE_DEMO_STRESS
         lv_demo_stress();
     #else
